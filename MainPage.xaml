@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Pink"
+             SafeAreaEdges="All"
+             x:Class="Simple_M10.MainPage">
+    <Grid BackgroundColor="AliceBlue"
+          SafeAreaEdges="Container">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <BoxView BackgroundColor="Pink"
+                 WidthRequest="60"
+                 Grid.Column="0"
+                 Grid.RowSpan="3" />
+
+        <Label Text="Bug report: Snackbar behind statusbar running API 29 or lower"               
+               Grid.Column="1"
+               Margin="5"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" LineBreakMode="WordWrap" />
+        <Button Text="Show snackbar"
+                Clicked="Button_Clicked"    
+                Grid.ColumnSpan="2"
+                Grid.Row="1"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+    </Grid>
+</ContentPage>
